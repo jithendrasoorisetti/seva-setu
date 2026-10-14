@@ -1,0 +1,793 @@
+[
+  {
+    "id": "ap-ysr-rythu-bharosa",
+    "name": {
+      "en": "YSR Rythu Bharosa",
+      "te": "వైఎస్సార్ రైతు భరోసా",
+      "hi": "वाईएसआर रायथू भरोसा"
+    },
+    "description": {
+      "en": "Financial assistance of ₹13,500 per year provided to farmer families including tenant farmers to support agricultural investments.",
+      "te": "వ్యవసాయ పెట్టుబడి సహాయంగా రైతు కుటుంబాలకు (కౌలు రైతులతో సహా) ఏడాదికి ₹13,500 ఆర్థిక సాయం అందించే పథకం.",
+      "hi": "कृषि निवेश में सहायता के लिए काश्तकार किसानों सहित किसान परिवारों को प्रति वर्ष ₹13,500 की वित्तीय सहायता।"
+    },
+    "benefit_summary": {
+      "en": "₹13,500 per year deposited directly into bank account in three installments.",
+      "te": "మూడు విడతల్లో నేరుగా బ్యాంకు ఖాతాలో ఏడాదికి ₹13,500 జమ చేయబడుతుంది.",
+      "hi": "तीन किस्तों में सीधे बैंक खाते में प्रति वर्ष ₹13,500 की सहायता।"
+    },
+    "official_source_url": "https://ysrrythubharosa.ap.gov.in",
+    "last_verified_date": "2025-01-15",
+    "data_status": "UNVERIFIED",
+    "verification_notes": "Official portal accessible at ysrrythubharosa.ap.gov.in. Thresholds for land holding and tenant agreement formats must be re-verified against latest G.O. for FY 2025-26.",
+    "eligibility_rules": {
+      "type": "all",
+      "rules": [
+        {
+          "type": "boolean_true",
+          "field": "is_andhra_pradesh_resident",
+          "description": "Applicant must be a permanent resident of Andhra Pradesh."
+        },
+        {
+          "type": "equals",
+          "field": "occupation",
+          "value": "FARMER",
+          "description": "Applicant must be actively engaged in farming (landowner or certified tenant farmer)."
+        },
+        {
+          "type": "numeric_max",
+          "field": "land_ownership_acres",
+          "value": 5,
+          "description": "Total cultivable land owned or leased should typically not exceed 5 acres for small/marginal criteria."
+        }
+      ]
+    },
+    "required_documents": [
+      {
+        "id": "doc-aadhaar",
+        "name": {
+          "en": "Aadhaar Card",
+          "te": "ఆధార్ కార్డు",
+          "hi": "आधार कार्ड"
+        },
+        "purpose": {
+          "en": "Identity and resident verification",
+          "te": "గుర్తింపు మరియు నివాస ధృవీకరణ",
+          "hi": "पहचान और निवास सत्यापन"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-pattadar-passbook",
+        "name": {
+          "en": "Pattadar Passbook / 1B Record or CCRC (Tenant Agreement)",
+          "te": "పట్టాదారు పాస్‌బుక్ / 1బి లేదా సిసిఆర్‌సి (కౌలు ఒప్పందం)",
+          "hi": "पट्टादार पासबुक / 1बी रिकॉर्ड या सीसीआरसी"
+        },
+        "purpose": {
+          "en": "Proof of agricultural land holding or legal tenancy agreement",
+          "te": "వ్యవసాయ భూమి యాజమాన్యం లేదా కౌలు ఒప్పంద ధృవీకరణ",
+          "hi": "कृषि भूमि स्वामित्व या किरायेदारी का प्रमाण"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-bank-passbook",
+        "name": {
+          "en": "Bank Account Linked to Aadhaar (NPCI active)",
+          "te": "ఆధార్ అనుసంధాన బ్యాంక్ ఖాతా (NPCI యాక్టివ్)",
+          "hi": "आधार से जुड़ा बैंक खाता (NPCI सक्रिय)"
+        },
+        "purpose": {
+          "en": "Direct Benefit Transfer (DBT)",
+          "te": "నేరుగా నగదు బదిలీ కొరకు",
+          "hi": "प्रत्यक्ष लाभ अंतरण (DBT)"
+        },
+        "is_mandatory": true
+      }
+    ],
+    "submission_steps": [
+      {
+        "step_number": 1,
+        "title": {
+          "en": "Visit Grama/Ward Sachivalayam",
+          "te": "గ్రామ/వార్డు సచివాలయాన్ని సంప్రదించండి",
+          "hi": "ग्राम/वार्ड सचिवालय जाएं"
+        },
+        "instructions": {
+          "en": "Meet the Village Agriculture Assistant (VAA) with your land documents and Aadhaar.",
+          "te": "మీ భూమి పత్రాలు మరియు ఆధార్‌తో గ్రామ వ్యవసాయ సహాయకుడిని (VAA) కలవండి.",
+          "hi": "अपने भूमि दस्तावेजों और आधार के साथ ग्राम कृषि सहायक (VAA) से मिलें।"
+        },
+        "office": "Grama Sachivalayam / Rythu Bharosa Kendra (RBK)"
+      },
+      {
+        "step_number": 2,
+        "title": {
+          "en": "E-Crop Booking Verification",
+          "te": "ఈ-క్రాప్ నమోదు తనిఖీ",
+          "hi": "ई-क्रॉप बुकिंग सत्यापन"
+        },
+        "instructions": {
+          "en": "Ensure your cultivated crop is registered in the official e-crop digital register.",
+          "te": "మీరు సాగు చేసిన పంట ఈ-క్రాప్ డిజిటల్ రిజిస్టర్‌లో నమోదైందో లేదో సరిచూసుకోండి.",
+          "hi": "सुनिश्चित करें कि आपकी फसल आधिकारिक ई-क्रॉप रजिस्टर में दर्ज है।"
+        },
+        "office": "Rythu Bharosa Kendra (RBK)"
+      },
+      {
+        "step_number": 3,
+        "title": {
+          "en": "Social Audit List Verification",
+          "te": "సామాజిక తనిఖీ జాబితా పరిశీలన",
+          "hi": "सोशल ऑडिट सूची सत्यापन"
+        },
+        "instructions": {
+          "en": "Check your name in the published beneficiary list displayed on the Sachivalayam notice board.",
+          "te": "సచివాలయ నోటీస్ బోర్డులో ప్రదర్శించిన లబ్ధిదారుల జాబితాలో మీ పేరును పరిశీలించండి.",
+          "hi": "सचिवालय के नोटिस बोर्ड पर प्रदर्शित लाभार्थी सूची में अपना नाम जांचें।"
+        },
+        "office": "Grama Sachivalayam"
+      }
+    ],
+    "office_contact_info": {
+      "department": "Department of Agriculture, Government of Andhra Pradesh",
+      "helpline": "1902",
+      "office_name": "Rythu Bharosa Kendra / Grama Sachivalayam"
+    }
+  },
+  {
+    "id": "ap-ysr-pension-kanuka",
+    "name": {
+      "en": "YSR Pension Kanuka (Social Security Pension)",
+      "te": "వైఎస్సార్ పెన్షన్ కానుక (సామాజిక భద్రతా పెన్షన్)",
+      "hi": "वाईएसआर पेंशन कानुका (सामाजिक सुरक्षा पेंशन)"
+    },
+    "description": {
+      "en": "Monthly pension for senior citizens (60+ years), widows, and differently-abled individuals to secure dignified livelihood.",
+      "te": "వృద్ధులు (60+ ఏళ్ళు), వితంతువులు మరియు దివ్యాంగులకు నెలకు గౌరవప్రదమైన జీవనోపాధి కల్పించే పెన్షన్ పథకం.",
+      "hi": "वरिष्ठ नागरिकों (60+ वर्ष), विधवाओं और दिव्यांग व्यक्तियों के लिए मासिक पेंशन योजना।"
+    },
+    "benefit_summary": {
+      "en": "₹3,000 to ₹4,000 per month doorstep cash delivery by village volunteers.",
+      "te": "నెలకు ₹3,000 నుండి ₹4,000 వరకు గ్రామ వాలంటీర్ ద్వారా ఇంటి వద్దకే పంపిణీ.",
+      "hi": "₹3,000 से ₹4,000 प्रति माह सीधे घर पर पेंशन।"
+    },
+    "official_source_url": "https://sspensions.ap.gov.in",
+    "last_verified_date": "2025-01-20",
+    "data_status": "UNVERIFIED",
+    "verification_notes": "Official portal sspensions.ap.gov.in. Age limit for Old Age Pension is 60 years. Disability pension requires minimum 40% disability certificate on SADAREM portal.",
+    "eligibility_rules": {
+      "type": "all",
+      "rules": [
+        {
+          "type": "boolean_true",
+          "field": "is_andhra_pradesh_resident",
+          "description": "Applicant must reside in Andhra Pradesh."
+        },
+        {
+          "type": "numeric_max",
+          "field": "annual_income",
+          "value": 120000,
+          "description": "Total family annual income must not exceed ₹1,20,000 (rural) or ₹1,44,000 (urban)."
+        },
+        {
+          "type": "any",
+          "rules": [
+            {
+              "type": "numeric_min",
+              "field": "age",
+              "value": 60,
+              "description": "Applicant is 60 years or older (Old Age category)."
+            },
+            {
+              "type": "numeric_min",
+              "field": "disability_percentage",
+              "value": 40,
+              "description": "Applicant has at least 40% certified disability."
+            },
+            {
+              "type": "equals",
+              "field": "occupation",
+              "value": "WIDOW",
+              "description": "Applicant is a registered widow."
+            }
+          ]
+        }
+      ]
+    },
+    "required_documents": [
+      {
+        "id": "doc-aadhaar",
+        "name": {
+          "en": "Aadhaar Card",
+          "te": "ఆధార్ కార్డు",
+          "hi": "आधार कार्ड"
+        },
+        "purpose": {
+          "en": "Age and identity proof",
+          "te": "వయస్సు మరియు గుర్తింపు ధృవీకరణ",
+          "hi": "आयु और पहचान प्रमाण"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-rice-card",
+        "name": {
+          "en": "Rice Card / White Ration Card",
+          "te": "రైస్ కార్డు / తెల్ల రేషన్ కార్డు",
+          "hi": "राइस कार्ड / सफेद राशन कार्ड"
+        },
+        "purpose": {
+          "en": "Income / BPL status verification",
+          "te": "ఆదాయ / దారిద్య్రరేఖ ధృవీకరణ",
+          "hi": "आय / बीपीएल स्थिति सत्यापन"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-sadarem-or-death-cert",
+        "name": {
+          "en": "SADAREM Certificate (if disabled) or Spouse Death Certificate (if widow)",
+          "te": "సదరమ్ సర్టిఫికేట్ (దివ్యాంగులైతే) లేదా భర్త మరణ ధృవీకరణ పత్రం (వితంతువులైతే)",
+          "hi": "सदारम प्रमाण पत्र (दिव्यांग) या पति मृत्यु प्रमाण पत्र (विधवा)"
+        },
+        "purpose": {
+          "en": "Special category qualification",
+          "te": "ప్రత్యేక వర్గ అర్హత ధృవీకరణ",
+          "hi": "विशेष श्रेणी पात्रता सत्यापन"
+        },
+        "is_mandatory": false
+      }
+    ],
+    "submission_steps": [
+      {
+        "step_number": 1,
+        "title": {
+          "en": "Submit Application at Sachivalayam",
+          "te": "సచివాలయంలో దరఖాస్తు సమర్పించండి",
+          "hi": "सचिवालय में आवेदन जमा करें"
+        },
+        "instructions": {
+          "en": "Submit your bio-data and copy of Rice Card to the Welfare & Education Assistant (WEA).",
+          "te": "సంక్షేమ మరియు విద్య సహాయకుడికి (WEA) వివరాలు మరియు రైస్ కార్డు కాపీని అందజేయండి.",
+          "hi": "कल्याण एवं शिक्षा सहायक (WEA) को विवरण व राइस कार्ड जमा करें।"
+        },
+        "office": "Grama/Ward Sachivalayam"
+      },
+      {
+        "step_number": 2,
+        "title": {
+          "en": "Field Verification",
+          "te": "క్షేత్రస్థాయి పరిశీలన",
+          "hi": "फ़ील्ड सत्यापन"
+        },
+        "instructions": {
+          "en": "Panchayat Secretary / Ward Administrative Officer inspects residential criteria.",
+          "te": "పంచాయతీ కార్యదర్శి నివాస నిబంధనలను పరిశీలిస్తారు.",
+          "hi": "पंचायत सचिव आवासीय मानदंडों का निरीक्षण करते हैं।"
+        },
+        "office": "Local Residence / Sachivalayam"
+      },
+      {
+        "step_number": 3,
+        "title": {
+          "en": "Sanction by MPDO/Municipal Commissioner",
+          "te": "MPDO / మునిసిపల్ కమిషనర్ ద్వారా మంజూరు",
+          "hi": "एमपीडीओ / नगर आयुक्त द्वारा स्वीकृति"
+        },
+        "instructions": {
+          "en": "Sanction order generated on the SSPensions portal and pension card delivered.",
+          "te": "SSPensions పోర్టల్ ద్వారా మంజూరు ఉత్తర్వు జారీ చేయబడి పెన్షన్ కార్డు అందుతుంది.",
+          "hi": "पोर्टल पर स्वीकृति आदेश जारी होकर पेंशन कार्ड प्राप्त होगा।"
+        },
+        "office": "MPDO Office / Municipal Office"
+      }
+    ],
+    "office_contact_info": {
+      "department": "Society for Elimination of Rural Poverty (SERP), Andhra Pradesh",
+      "helpline": "1902",
+      "office_name": "Grama/Ward Sachivalayam"
+    }
+  },
+  {
+    "id": "ap-ysr-aarogyasri",
+    "name": {
+      "en": "Dr. YSR Aarogyasri Scheme",
+      "te": "డాక్టర్ వైఎస్సార్ ఆరోగ్యశ్రీ పథకం",
+      "hi": "डॉ. वाईएसआर आरोग्यश्री योजना"
+    },
+    "description": {
+      "en": "Cashless comprehensive medical and surgical healthcare up to ₹25,00,000 for critical and catastrophic illnesses across empanelled hospitals.",
+      "te": "నెట్‌వర్క్ ఆసుపత్రులలో తీవ్రమైన అనారోగ్యాలకు ₹25 లక్షల వరకు ఉచిత నగదు రహిత నాణ్యమైన వైద్య మరియు శస్త్రచికిత్స సేవలు.",
+      "hi": "सूचीबद्ध अस्पतालों में गंभीर बीमारियों के लिए ₹25 लाख तक का कैशलेस व्यापक चिकित्सा उपचार।"
+    },
+    "benefit_summary": {
+      "en": "100% cashless medical care up to ₹25,00,000 for eligible family members.",
+      "te": "అర్హులైన కుటుంబ సభ్యులకు ₹25 లక్షల వరకు 100% ఉచిత నగదు రహిత చికిత్స.",
+      "hi": "पात्र परिवार के लिए ₹25 लाख तक पूरी तरह से कैशलेस इलाज।"
+    },
+    "official_source_url": "https://aarogyasri.ap.gov.in",
+    "last_verified_date": "2025-01-10",
+    "data_status": "UNVERIFIED",
+    "verification_notes": "Official portal aarogyasri.ap.gov.in. Enhanced coverage ceiling raised to ₹25 Lakhs per family per annum; requires active AP Aarogyasri Health Card or Rice Card.",
+    "eligibility_rules": {
+      "type": "all",
+      "rules": [
+        {
+          "type": "boolean_true",
+          "field": "is_andhra_pradesh_resident",
+          "description": "Applicant must reside in Andhra Pradesh."
+        },
+        {
+          "type": "numeric_max",
+          "field": "annual_income",
+          "value": 500000,
+          "description": "Annual family income must be under ₹5,00,000."
+        },
+        {
+          "type": "boolean_true",
+          "field": "has_white_ration_card",
+          "description": "Family holds an active White Ration Card / Rice Card or Aarogyasri Card."
+        }
+      ]
+    },
+    "required_documents": [
+      {
+        "id": "doc-aarogyasri-card",
+        "name": {
+          "en": "Aarogyasri Health Card or Rice Card",
+          "te": "ఆరోగ్యశ్రీ హెల్త్ కార్డు లేదా రైస్ కార్డు",
+          "hi": "आरोग्यश्री हेल्थ कार्ड या राइस कार्ड"
+        },
+        "purpose": {
+          "en": "Eligibility verification for cashless hospital admission",
+          "te": "నగదు రహిత ఆసుపత్రి అడ్మిషన్ కోసం అర్హత ధృవీకరణ",
+          "hi": "कैशलेस अस्पताल प्रवेश हेतु पात्रता सत्यापन"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-patient-aadhaar",
+        "name": {
+          "en": "Patient's Aadhaar Card",
+          "te": "రోగి యొక్క ఆధార్ కార్డు",
+          "hi": "मरीज का आधार कार्ड"
+        },
+        "purpose": {
+          "en": "Identity and biometric validation at hospital kiosk",
+          "te": "ఆసుపత్రి కియోస్క్ వద్ద గుర్తింపు మరియు బయోమెట్రిక్ ధృవీకరణ",
+          "hi": "अस्पताल में बायोमेट्रिक पहचान"
+        },
+        "is_mandatory": true
+      }
+    ],
+    "submission_steps": [
+      {
+        "step_number": 1,
+        "title": {
+          "en": "Visit Empanelled Hospital Kiosk",
+          "te": "నెట్‌వర్క్ ఆసుపత్రిలోని ఆరోగ్య మిత్ర కియోస్క్‌ను సంప్రదించండి",
+          "hi": "अस्पताल के आरोग्य मित्र कियोस्क पर जाएं"
+        },
+        "instructions": {
+          "en": "Approach the 'Aarogya Mithra' desk at any network hospital with your health/rice card.",
+          "te": "మీ కార్డుతో ఏదైనా నెట్‌వర్క్ ఆసుపత్రిలోని 'ఆరోగ్య మిత్ర' హెల్ప్ డెస్క్‌ను సంప్రదించండి.",
+          "hi": "किसी भी नेटवर्क अस्पताल में अपने कार्ड के साथ आरोग्य मित्र डेस्क पर जाएं।"
+        },
+        "office": "Aarogya Mithra Help Desk at Empanelled Network Hospital"
+      },
+      {
+        "step_number": 2,
+        "title": {
+          "en": "Pre-Authorization & Treatment",
+          "te": "ముందస్తు అనుమతి (Pre-Auth) మరియు చికిత్స",
+          "hi": "पूर्व-प्राधिकरण और उपचार"
+        },
+        "instructions": {
+          "en": "Doctor submits electronic pre-authorization; upon trust approval, cashless treatment commences.",
+          "te": "వైద్యులు ఆన్‌లైన్ ద్వారా అనుమతి పంపుతారు; ట్రస్ట్ ఆమోదం పొందిన వెంటనే నగదు రహిత చికిత్స ప్రారంభమవుతుంది.",
+          "hi": "डॉक्टर ऑनलाइन प्री-ऑथराइजेशन भेजते हैं; मंजूरी के बाद मुफ्त इलाज शुरू होता है।"
+        },
+        "office": "Empanelled Hospital / Aarogyasri Trust"
+      }
+    ],
+    "office_contact_info": {
+      "department": "Dr. YSR Aarogyasri Health Care Trust, AP",
+      "helpline": "104",
+      "office_name": "Aarogya Mithra Help Desk / PHC"
+    }
+  },
+  {
+    "id": "ap-ysr-cheyutha",
+    "name": {
+      "en": "YSR Cheyutha",
+      "te": "వైఎస్సార్ చేయూత",
+      "hi": "वाईएसआर चेयूता"
+    },
+    "description": {
+      "en": "Financial assistance of ₹18,750 per year (total ₹75,000 over 4 years) to women aged 45-60 years belonging to SC, ST, BC, and Minority communities for sustainable entrepreneurship.",
+      "te": "ఎస్సీ, ఎస్టీ, బీసీ మరియు మైనారిటీ వర్గాలకు చెందిన 45-60 ఏళ్ల మహిళల స్వయం ఉపాధి కొరకు ఏడాదికి ₹18,750 (4 ఏళ్లలో మొత్తం ₹75,000) ఆర్థిక సహాయం.",
+      "hi": "45-60 वर्ष की एससी, एसटी, बीसी और अल्पसंख्यक महिलाओं के स्वरोजगार हेतु प्रति वर्ष ₹18,750 (4 वर्षों में कुल ₹75,000) की वित्तीय सहायता।"
+    },
+    "benefit_summary": {
+      "en": "₹18,750 direct bank transfer per year for livelihood development.",
+      "te": "జీవనోపాధి అభివృద్ధి కొరకు ఏడాదికి ₹18,750 నేరుగా బ్యాంకు ఖాతాలో జమ.",
+      "hi": "आजीविका विकास के लिए प्रति वर्ष ₹18,750 सीधे बैंक खाते में।"
+    },
+    "official_source_url": "https://navasakam.ap.gov.in",
+    "last_verified_date": "2025-01-18",
+    "data_status": "UNVERIFIED",
+    "verification_notes": "Official portal navasakam.ap.gov.in. Age strictly between 45 and 60 years on eligibility cutoff date. Non-earning or non-pensioner household conditions apply.",
+    "eligibility_rules": {
+      "type": "all",
+      "rules": [
+        {
+          "type": "boolean_true",
+          "field": "is_andhra_pradesh_resident",
+          "description": "Applicant must reside in Andhra Pradesh."
+        },
+        {
+          "type": "equals",
+          "field": "gender",
+          "value": "FEMALE",
+          "description": "Applicant must be a woman."
+        },
+        {
+          "type": "numeric_min",
+          "field": "age",
+          "value": 45,
+          "description": "Minimum age is 45 years."
+        },
+        {
+          "type": "numeric_max",
+          "field": "age",
+          "value": 60,
+          "description": "Maximum age is 60 years."
+        },
+        {
+          "type": "one_of",
+          "field": "caste_category",
+          "values": ["SC", "ST", "BC", "MINORITY"],
+          "description": "Applicant must belong to SC, ST, BC, or Minority community."
+        },
+        {
+          "type": "numeric_max",
+          "field": "annual_income",
+          "value": 120000,
+          "description": "Family annual income must not exceed ₹1,20,000 (rural) or ₹1,44,000 (urban)."
+        }
+      ]
+    },
+    "required_documents": [
+      {
+        "id": "doc-aadhaar",
+        "name": {
+          "en": "Aadhaar Card",
+          "te": "ఆధార్ కార్డు",
+          "hi": "आधार कार्ड"
+        },
+        "purpose": {
+          "en": "Age and identity verification",
+          "te": "వయస్సు మరియు గుర్తింపు ధృవీకరణ",
+          "hi": "आयु और पहचान सत्यापन"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-caste-certificate",
+        "name": {
+          "en": "Integrated Caste Certificate",
+          "te": "సమగ్ర కుల ధృవీకరణ పత్రం",
+          "hi": "जाति प्रमाण पत्र"
+        },
+        "purpose": {
+          "en": "Proof of SC/ST/BC/Minority category",
+          "te": "ఎస్సీ/ఎస్టీ/బీసీ/మైనారిటీ వర్గ ధృవీకరణ",
+          "hi": "आरक्षित श्रेणी का प्रमाण"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-bank-passbook",
+        "name": {
+          "en": "Aadhaar-linked Unencumbered Bank Passbook",
+          "te": "ఆధార్ అనుసంధాన పొదుపు ఖాతా పుస్తకం",
+          "hi": "आधार से जुड़ी बैंक पासबुक"
+        },
+        "purpose": {
+          "en": "Direct Benefit Transfer",
+          "te": "నేరుగా బ్యాంకు ఖాతాకు సాయం బదిలీ",
+          "hi": "प्रत्यक्ष लाभ अंतरण"
+        },
+        "is_mandatory": true
+      }
+    ],
+    "submission_steps": [
+      {
+        "step_number": 1,
+        "title": {
+          "en": "Verification via Grama Sachivalayam",
+          "te": "గ్రామ సచివాలయంలో సమాచార నమోదు",
+          "hi": "ग्राम सचिवालय में विवरण दर्ज करना"
+        },
+        "instructions": {
+          "en": "Submit documents to Welfare & Education Assistant (WEA) for Navasakam portal entry.",
+          "te": "నవశకం పోర్టల్‌లో నమోదు కోసం పత్రాలను సంక్షేమ మరియు విద్య సహాయకుడికి అందజేయండి.",
+          "hi": "नवसकम पोर्टल में प्रविष्टि के लिए दस्तावेज कल्याण सहायक को दें।"
+        },
+        "office": "Grama/Ward Sachivalayam"
+      },
+      {
+        "step_number": 2,
+        "title": {
+          "en": "Social Audit List Check",
+          "te": "సామాజిక తనిఖీ జాబితా పరిశీలన",
+          "hi": "सोशल ऑडिट सूची जांच"
+        },
+        "instructions": {
+          "en": "Confirm your name in the provisional list published for social audit.",
+          "te": "సోషల్ ఆడిట్ కొరకు ప్రకటించిన ప్రాథమిక జాబితాలో మీ పేరును సరిచూసుకోండి.",
+          "hi": "सोशल ऑडिट के लिए प्रकाशित सूची में अपना नाम जांचें।"
+        },
+        "office": "Grama Sachivalayam Notice Board"
+      }
+    ],
+    "office_contact_info": {
+      "department": "Department of Social Welfare / BC Welfare, Andhra Pradesh",
+      "helpline": "1902",
+      "office_name": "Grama/Ward Sachivalayam"
+    }
+  },
+  {
+    "id": "ap-ysr-netanna-nestham",
+    "name": {
+      "en": "YSR Netanna Nestham",
+      "te": "వైఎస్సార్ నేతన్న నేస్తం",
+      "hi": "वाईएसआर नेथन्ना नेस्तम"
+    },
+    "description": {
+      "en": "Annual financial aid of ₹24,000 to every handloom weaver family owning a loom to upgrade equipment and secure working capital.",
+      "te": "మగ్గం ఉన్న ప్రతి చేనేత కార్మిక కుటుంబానికి ఆధునిక పనిముట్లు మరియు పెట్టుబడి కొరకు ఏడాదికి ₹24,000 ఆర్థిక సాయం.",
+      "hi": "करघा रखने वाले प्रत्येक हथकरघा बुनकर परिवार को उपकरण उन्नयन और कार्यशील पूंजी के लिए ₹24,000 की वार्षिक सहायता।"
+    },
+    "benefit_summary": {
+      "en": "₹24,000 per year directly to weaver bank account.",
+      "te": "చేనేత కార్మికుని బ్యాంకు ఖాతాలో నేరుగా ఏడాదికి ₹24,000 జమ.",
+      "hi": "बुनकर के बैंक खाते में प्रति वर्ष ₹24,000 सीधे अंतरण।"
+    },
+    "official_source_url": "https://navasakam.ap.gov.in",
+    "last_verified_date": "2025-01-12",
+    "data_status": "UNVERIFIED",
+    "verification_notes": "Official portal navasakam.ap.gov.in. Must own a working handloom; geo-tagging of the handloom by Handloom & Textiles Department is mandatory.",
+    "eligibility_rules": {
+      "type": "all",
+      "rules": [
+        {
+          "type": "boolean_true",
+          "field": "is_andhra_pradesh_resident",
+          "description": "Applicant must reside in Andhra Pradesh."
+        },
+        {
+          "type": "equals",
+          "field": "occupation",
+          "value": "WEAVER",
+          "description": "Applicant must be a practicing handloom weaver."
+        },
+        {
+          "type": "numeric_max",
+          "field": "annual_income",
+          "value": 120000,
+          "description": "Annual household income must not exceed ₹1,20,000 (rural) or ₹1,44,000 (urban)."
+        }
+      ]
+    },
+    "required_documents": [
+      {
+        "id": "doc-aadhaar",
+        "name": {
+          "en": "Aadhaar Card",
+          "te": "ఆధార్ కార్డు",
+          "hi": "आधार कार्ड"
+        },
+        "purpose": {
+          "en": "Identity proof",
+          "te": "గుర్తింపు ధృవీకరణ",
+          "hi": "पहचान प्रमाण"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-weaver-id",
+        "name": {
+          "en": "Handloom Weaver Artisan Card / Registration Certificate",
+          "te": "చేనేత కార్మిక గుర్తింపు కార్డు / రిజిస్ట్రేషన్ పత్రం",
+          "hi": "हथकरघा बुनकर पहचान पत्र"
+        },
+        "purpose": {
+          "en": "Proof of profession and loom ownership",
+          "te": "చేనేత వృత్తి మరియు మగ్గం యాజమాన్య ధృవీకరణ",
+          "hi": "व्यवसाय और करघा स्वामित्व का प्रमाण"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-rice-card",
+        "name": {
+          "en": "Rice Card / BPL Card",
+          "te": "రైస్ కార్డు / బిపిఎల్ కార్డు",
+          "hi": "राइस कार्ड / बीपीएल कार्ड"
+        },
+        "purpose": {
+          "en": "Income verification",
+          "te": "ఆదాయ ధృవీకరణ",
+          "hi": "आय सत्यापन"
+        },
+        "is_mandatory": true
+      }
+    ],
+    "submission_steps": [
+      {
+        "step_number": 1,
+        "title": {
+          "en": "Enrollment at Sachivalayam",
+          "te": "సచివాలయంలో దరఖాస్తు సమర్పణ",
+          "hi": "सचिवालय में नामांकन"
+        },
+        "instructions": {
+          "en": "Enroll with the Village/Ward Secretary along with your Handloom registration.",
+          "te": "చేనేత రిజిస్ట్రేషన్ పత్రాలతో గ్రామ/వార్డు కార్యదర్శి వద్ద దరఖాస్తు చేసుకోండి.",
+          "hi": "हथकरघा पंजीकरण के साथ सचिवालय में आवेदन करें।"
+        },
+        "office": "Grama/Ward Sachivalayam"
+      },
+      {
+        "step_number": 2,
+        "title": {
+          "en": "Physical Inspection & Geo-Tagging",
+          "te": "మగ్గం ప్రత్యక్ష తనిఖీ మరియు జియో-ట్యాగింగ్",
+          "hi": "भौतिक निरीक्षण एवं जियो-टैगिंग"
+        },
+        "instructions": {
+          "en": "Assistant Director of Handlooms inspects and geo-tags the working loom in your premises.",
+          "te": "చేనేత శాఖ అధికారులు మీ వద్ద ఉన్న మగ్గాన్ని పరిశీలించి జియో-ట్యాగ్ చేస్తారు.",
+          "hi": "हथकरघा विभाग के अधिकारी करघे का निरीक्षण और जियो-टैगिंग करते हैं।"
+        },
+        "office": "Weaver Household Premises"
+      }
+    ],
+    "office_contact_info": {
+      "department": "Department of Handlooms and Textiles, Andhra Pradesh",
+      "helpline": "1902",
+      "office_name": "District Handloom Office / Grama Sachivalayam"
+    }
+  },
+  {
+    "id": "ap-jagananna-ammavodi",
+    "name": {
+      "en": "Jagananna Ammavodi",
+      "te": "జగనన్న అమ్మఒడి",
+      "hi": "जगनन्ना अम्मा वोडी"
+    },
+    "description": {
+      "en": "Financial assistance of ₹15,000 per year provided to needy mothers/guardians who send their children to recognized schools or junior colleges (Classes 1 to 12).",
+      "te": "తమ పిల్లలను బడులకు పంపే నిరుపేద తల్లులకు/సంరక్షకులకు (1 నుండి 12వ తరగతి వరకు) విద్యా ప్రోత్సాహకంగా ఏడాదికి ₹15,000 అందించే పథకం.",
+      "hi": "अपने बच्चों को मान्यता प्राप्त स्कूलों या कॉलेजों (कक्षा 1 से 12) में भेजने वाली माताओं/अभिभावकों को प्रति वर्ष ₹15,000 की वित्तीय सहायता।"
+    },
+    "benefit_summary": {
+      "en": "₹15,000 per annum deposited directly into mother's bank account.",
+      "te": "తల్లి బ్యాంకు ఖాతాలో నేరుగా ఏడాదికి ₹15,000 జమ.",
+      "hi": "माता के बैंक खाते में प्रति वर्ष ₹15,000 सीधे जमा।"
+    },
+    "official_source_url": "https://jaganannaammavodi.ap.gov.in",
+    "last_verified_date": "2025-01-05",
+    "data_status": "UNVERIFIED",
+    "verification_notes": "Official portal jaganannaammavodi.ap.gov.in. Student must maintain minimum 75% attendance during the academic year; mother must possess active Aadhaar-linked bank account.",
+    "eligibility_rules": {
+      "type": "all",
+      "rules": [
+        {
+          "type": "boolean_true",
+          "field": "is_andhra_pradesh_resident",
+          "description": "Applicant family must reside in Andhra Pradesh."
+        },
+        {
+          "type": "equals",
+          "field": "gender",
+          "value": "FEMALE",
+          "description": "Primary applicant must be the mother or legal female guardian."
+        },
+        {
+          "type": "boolean_true",
+          "field": "has_school_going_children",
+          "description": "Mother has child/children enrolled in Class 1 to 12 in a recognized school/junior college."
+        },
+        {
+          "type": "numeric_max",
+          "field": "annual_income",
+          "value": 120000,
+          "description": "Family annual income must not exceed ₹1,20,000 (rural) or ₹1,44,000 (urban)."
+        }
+      ]
+    },
+    "required_documents": [
+      {
+        "id": "doc-mother-aadhaar",
+        "name": {
+          "en": "Mother's and Child's Aadhaar Cards",
+          "te": "తల్లి మరియు పిల్లల ఆధార్ కార్డులు",
+          "hi": "माता और बच्चे का आधार कार्ड"
+        },
+        "purpose": {
+          "en": "Identity and relationship verification",
+          "te": "గుర్తింపు మరియు సంబంధ ధృవీకరణ",
+          "hi": "पहचान और संबंध सत्यापन"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-school-study-cert",
+        "name": {
+          "en": "School Study / Bonafide Certificate with U-DISE Code",
+          "te": "పాఠశాల బోనఫైడ్ సర్టిఫికేట్ (U-DISE కోడ్‌తో)",
+          "hi": "स्कूल अध्ययन / बोनाफाइड प्रमाण पत्र"
+        },
+        "purpose": {
+          "en": "Proof of enrollment and minimum 75% school attendance",
+          "te": "పాఠశాల ప్రవేశం మరియు 75% హాజరు ధృవీకరణ",
+          "hi": "नामांकन और 75% न्यूनतम उपस्थिति का प्रमाण"
+        },
+        "is_mandatory": true
+      },
+      {
+        "id": "doc-rice-card",
+        "name": {
+          "en": "White Ration Card / Rice Card",
+          "te": "తెల్ల రేషన్ కార్డు / రైస్ కార్డు",
+          "hi": "सफेद राशन कार्ड / राइस कार्ड"
+        },
+        "purpose": {
+          "en": "Low-income household verification",
+          "te": "దారిద్య్రరేఖ దిగువ వర్గ ధృవీకరణ",
+          "hi": "कम आय वर्ग सत्यापन"
+        },
+        "is_mandatory": true
+      }
+    ],
+    "submission_steps": [
+      {
+        "step_number": 1,
+        "title": {
+          "en": "School Level Data Entry",
+          "te": "పాఠశాల స్థాయిలో వివరాల నమోదు",
+          "hi": "स्कूल स्तर पर डेटा प्रविष्टि"
+        },
+        "instructions": {
+          "en": "Headmaster of the school registers the student and mother's bank details on the Child Info portal.",
+          "te": "పాఠశాల ప్రధానోపాధ్యాయులు విద్యార్థి మరియు తల్లి బ్యాంకు వివరాలను చైల్డ్ ఇన్ఫో పోర్టల్‌లో నమోదు చేస్తారు.",
+          "hi": "स्कूल के प्रधानाध्यापक पोर्टल पर बच्चे और माता का विवरण दर्ज करते हैं।"
+        },
+        "office": "Respective School / Junior College"
+      },
+      {
+        "step_number": 2,
+        "title": {
+          "en": "Social Audit at Sachivalayam",
+          "te": "సచివాలయంలో సామాజిక తనిఖీ",
+          "hi": "सचिवालय में सामाजिक अंकेक्षण"
+        },
+        "instructions": {
+          "en": "Examine eligible list published at Grama Sachivalayam; submit grievance if name is missing.",
+          "te": "సచివాలయంలో ప్రచురించిన జాబితా పరిశీలించి, పేరు లేకపోతే వెంటనే వినతిపత్రం అందజేయండి.",
+          "hi": "सचिवालय में प्रकाशित सूची देखें और नाम न होने पर शिकायत दर्ज कराएं।"
+        },
+        "office": "Grama/Ward Sachivalayam"
+      }
+    ],
+    "office_contact_info": {
+      "department": "Department of School Education, Government of Andhra Pradesh",
+      "helpline": "14417",
+      "office_name": "Grama/Ward Sachivalayam / MEO Office"
+    }
+  }
+]

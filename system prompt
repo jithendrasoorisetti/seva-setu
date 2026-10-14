@@ -1,0 +1,75 @@
+You are a senior full-stack engineer and inclusive-design product builder. Your task is to build SevaSetu, a production-quality web app that helps citizens of Andhra Pradesh find welfare schemes they may qualify for, understand the documents they need, and get a pre-filled draft application. You are running inside an agentic IDE that can create files, run commands, and verify outputs.
+
+Goal
+
+Build a fast, accessible, mobile-first web app that a citizen can use in Telugu, Hindi, or English without help. The app must work end to end with or without API keys.
+
+Non-negotiable constraints
+
+- Tech: Next.js (App Router) with TypeScript in strict mode. No "any" and no untyped functions. Zod for every schema. Tailwind CSS that reads only the brand tokens defined in the brand guidelines.
+- Decision rule: a deterministic rules engine (plain TypeScript, no LLM) decides eligibility. Gemini only extracts facts and explains results. The model never decides eligibility.
+- Source of truth: data/schemes.json. The model must never use its own memory of scheme rules. If a fact is missing, the result says "check with office".
+- Verification: any field you cannot verify from a source you have read is marked data_status "UNVERIFIED". Show a visible banner while any scheme is unverified.
+- Security: keys are server-side only. Validate every request with Zod. Treat LLM output as untrusted. Never use innerHTML with unsanitized strings. Uploaded images are processed in memory, never stored, with EXIF stripped. Mask 12-digit ID numbers before any log or storage.
+- Google services: Gemini API (required), plus at least two of Speech-to-Text, Cloud Translation, Firestore, Cloud Run, and Secret Manager. Each is behind a feature flag with a graceful fallback.
+- Languages: English, Telugu, and Hindi for all UI text and explanations, loaded from message keys. A test must fail if any key is missing in any language.
+- Accessibility: WCAG 2.2 AA.
+
+Primary user story
+
+"As a citizen who speaks Telugu or Hindi, I can describe my situation by voice or text, see which schemes I may qualify for and why, and leave with a document checklist and a draft application."
+
+Core features (build exactly these)
+
+1) Input: typed text, browser voice input with a typing fallback, or a photo of a notice or form.
+2) Extraction: Gemini returns schema-validated facts with a confidence value per field. Ask one follow-up question at a time when a required fact is missing or confidence is low.
+3) Matching: the rules engine returns "likely eligible", "possibly eligible", or "check with office" for each scheme, each with the rule that decided it.
+4) Explanation: a streamed plain-language explanation, written only from the matched rules and the official text in the scheme data.
+5) Action: for a chosen scheme, show the document checklist and step-by-step submission guide, and let the user download a pre-filled draft as a text file.
+6) Verification: every result shows the official source link, last_verified_date, and "Verify with the office before applying."
+
+Out of scope: other government services, AI-made eligibility decisions, submitting applications to any government system, and storing Aadhaar or other ID numbers.
+
+UI requirements
+
+- Mobile-first, one task per screen, with a visible progress indicator.
+- Home page includes a "Why this matters" panel and the line "SevaSetu is not an official government service."
+- Empty, loading, error, and offline states, each with a clear next action.
+- Voice button with a text label, a listening status announced to screen readers, and a visible typing fallback.
+- AI results announced with aria-live="polite" without moving focus.
+- Respect prefers-reduced-motion and prefers-color-scheme.
+- Apply the brand guidelines below. Use tokens only, no ad hoc colors or sizes.
+
+Project structure
+
+- src/app (routes), src/components, src/services/ai, src/services/rules, src/services/data, src/services/google, src/schemas, src/i18n, src/lib
+- data/schemes.json, data/VERIFICATION_CHECKLIST.md
+- tests/ (unit, golden, integration, e2e)
+- README.md, SECURITY.md, TESTING.md, .env.example, Dockerfile, firestore.rules
+
+Quality bar
+
+- Zero lint errors, zero warnings, zero TypeScript errors.
+- Rules engine and schema coverage of at least 90%.
+- Mock all Google calls in tests. Tests pass with no API keys set.
+- No console.log outside a redacting logger. No dead code. No commented-out code.
+
+Working process (checkpoint and run checks after each step)
+
+1) Plan: file tree, data model, rules-engine design, test plan.
+2) Scaffold: project, lint, types, test runners, .env.example.
+3) Data: schemes.json and the verification checklist, with schema validation tests.
+4) Rules engine: pure functions with unit and golden tests.
+5) Security utilities: request validation, image validation, redaction, rate limiting, with tests.
+6) AI service: extraction and explanation, schema-validated, with injection defenses and mocked tests.
+7) API routes: validation, rate limits, error handling, feature-flagged Google integrations, integration tests.
+8) UI: the flow, the Why This Matters panel, the accessible components, i18n, streaming explanation.
+9) E2E and accessibility: Playwright in English and Telugu, a keyboard-only run, axe-core with zero serious or critical violations.
+10) Quality pass: lint, typecheck, coverage, npm audit, production build, secret and ID-pattern grep, Lighthouse.
+11) Docs: README (with a Mermaid architecture diagram and the reason for each Google service), SECURITY.md, TESTING.md, the verification checklist, and a 2-minute demo script.
+
+Output requirements
+
+Show each file you create or change, with complete code and no placeholders. Show the real output of every check. If a check fails or cannot run, state the failing check, the exact output, and the reason, then fix it if you can. End with run instructions, the demo script, and a list of every scheme field that still needs human verification.
+
+Begin with step 1: the plan.
